@@ -12,7 +12,6 @@ class Node {
 
 // console.log('MyNode: ', MyNode);
 
-
 class BinarySearchTree{
   constructor(){
     this.root = null
@@ -22,7 +21,6 @@ class BinarySearchTree{
       this.root = new Node(value)
     } else{
       if(value < this.root.value){
-        this.left = new Node(value)
         if (!this.left) {
           this.left = new BinarySearchTree()
           this.insert(value)
@@ -31,7 +29,6 @@ class BinarySearchTree{
         }
       }
       if(value > this.root.value){
-        this.right = new Node(value)
         if (!this.right) {
           this.right = new BinarySearchTree()
           this.right.insert(value)
