@@ -16,6 +16,7 @@ class BinarySearchTree{
   constructor(){
     this.root = null
   }
+
   insert(value){
     if (this.root === null){
       this.root = new Node(value)
@@ -40,9 +41,10 @@ class BinarySearchTree{
   }
 }
 
-const BTS = new BinarySearchTree()
+const BST = new BinarySearchTree()
 
-BTS.insert(2)
-BTS.insert(1)
-BTS.insert(3)
-console.log('BTS: ', BTS);
+BST.insert(2)
+BST.insert(1)
+BST.insert(3)
+BST.insert(4)
+console.log('BST: ', BST);
