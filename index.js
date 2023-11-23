@@ -23,9 +23,21 @@ class BinarySearchTree{
     } else{
       if(value < this.root.value){
         this.left = new Node(value)
+        if (!this.left) {
+          this.left = new BinarySearchTree()
+          this.insert(value)
+        } else {
+          this.left.insert(value)
+        }
       }
       if(value > this.root.value){
         this.right = new Node(value)
+        if (!this.right) {
+          this.right = new BinarySearchTree()
+          this.right.insert(value)
+        } else {
+          this.insert(value)
+        }
       }
     }
   }
