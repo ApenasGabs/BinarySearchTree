@@ -24,7 +24,7 @@ class BinarySearchTree{
       if(value < this.root.value){
         if (!this.left) {
           this.left = new BinarySearchTree()
-          this.insert(value)
+          this.left.insert(value)
         } else {
           this.left.insert(value)
         }
@@ -34,7 +34,7 @@ class BinarySearchTree{
           this.right = new BinarySearchTree()
           this.right.insert(value)
         } else {
-          this.insert(value)
+          this.right.insert(value)
         }
       }
     }
@@ -47,4 +47,6 @@ BST.insert(2)
 BST.insert(1)
 BST.insert(3)
 BST.insert(4)
-console.log('BST: ', BST);
+BST.insert(5)
+BST.insert(-1)
+console.log('BST: ', JSON.stringify(BST));
