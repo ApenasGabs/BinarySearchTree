@@ -65,7 +65,7 @@ The following tools were used in this project:
 
 ## :white_check_mark: Requirements
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/)/[GoLang](https://go.dev/doc/) installed.
 
 ## :checkered_flag: Starting
 
@@ -80,10 +80,14 @@ $ cd binarysearchtree
 $ npm i
 
 # Run the project
+
 $ npm run js
+# to run the JavaScript version
 
 $ npm run ts
+# to run the TypeScript version
 
+# to run the GoLang version
 $ npm run go
 
 # The server will initialize in the <http://localhost:3000>
