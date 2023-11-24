@@ -63,11 +63,11 @@ class BinarySearchTree {
 }
 const BST = new BinarySearchTree();
 
-BST.insert(1);
-BST.insert(3);
-BST.insert(-1);
-BST.insert(5);
-BST.decOrder();
+// BST.insert(1);
+// BST.insert(3);
+// BST.insert(-1);
+// BST.insert(5);
+// BST.decOrder();
 
 type MyFcNode = {
   value: number;
@@ -88,3 +88,19 @@ const insert = (tree: Tree, value: number): Tree => {
   }
   return tree;
 };
+
+const ascOrder = (tree: Tree): void => {
+  if (tree === null) return;
+  ascOrder(tree.left);
+  console.log(tree.value);
+  ascOrder(tree.right);
+};
+
+let bst: Tree = null;
+
+bst = insert(bst, 1);
+bst = insert(bst, 3);
+bst = insert(bst, -1);
+bst = insert(bst, 5);
+
+ascOrder(bst);
