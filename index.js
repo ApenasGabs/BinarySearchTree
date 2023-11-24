@@ -1,10 +1,10 @@
-class Node {    
-  constructor(value){
-      if (!value) {
-          throw "Value cannot be null"
-      }else{
-          this.value = value
-      }
+class Node {
+  constructor(value) {
+    if (!value) {
+      throw "Value cannot be null";
+    } else {
+      this.value = value;
+    }
   }
 }
 
@@ -12,63 +12,62 @@ class Node {
 
 // console.log('MyNode: ', MyNode);
 
-class BinarySearchTree{
-  constructor(){
-    this.root = null
+class BinarySearchTree {
+  constructor() {
+    this.root = null;
   }
 
-  insert(value){
-    if (this.root === null){
-      this.root = new Node(value)
-    } else{
-      if(value < this.root.value){
+  insert(value) {
+    if (this.root === null) {
+      this.root = new Node(value);
+    } else {
+      if (value < this.root.value) {
         if (!this.left) {
-          this.left = new BinarySearchTree()
-          this.left.insert(value)
+          this.left = new BinarySearchTree();
+          this.left.insert(value);
         } else {
-          this.left.insert(value)
+          this.left.insert(value);
         }
       }
-      if(value > this.root.value){
+      if (value > this.root.value) {
         if (!this.right) {
-          this.right = new BinarySearchTree()
-          this.right.insert(value)
+          this.right = new BinarySearchTree();
+          this.right.insert(value);
         } else {
-          this.right.insert(value)
+          this.right.insert(value);
         }
       }
     }
   }
-  inOrder(){
+  inOrder() {
     if (this.root) {
       if (this.left) {
-        this.left.inOrder()
+        this.left.inOrder();
       }
-    console.log(this.root.value)
+      console.log(this.root.value);
     }
     if (this.right) {
-      this.right.inOrder()
+      this.right.inOrder();
     }
   }
-  
-  decOrder(){
+
+  decOrder() {
     if (this.root) {
       if (this.right) {
-        this.right.decOrder()
+        this.right.decOrder();
       }
-    console.log(this.root.value)
+      console.log(this.root.value);
     }
     if (this.left) {
-      this.left.decOrder()
+      this.left.decOrder();
     }
   }
 }
 
-const BST = new BinarySearchTree()
+const BST = new BinarySearchTree();
 
 for (let index = 0; index < 10; index++) {
-  BST.insert(Math.random().toFixed(2))
-  
+  BST.insert(Math.random().toFixed(2));
 }
 // BST.insert(2)
 // BST.insert(1)
@@ -77,5 +76,5 @@ for (let index = 0; index < 10; index++) {
 // BST.insert(5)
 // BST.insert(-1)
 // console.log('BST: ', JSON.stringify(BST));
-BST.decOrder()
+BST.decOrder();
 // BST.inOrder()
