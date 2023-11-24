@@ -55,11 +55,15 @@ class BinarySearchTree{
 
 const BST = new BinarySearchTree()
 
-BST.insert(2)
-BST.insert(1)
-BST.insert(3)
-BST.insert(4)
-BST.insert(5)
-BST.insert(-1)
+for (let index = 0; index < 10; index++) {
+  BST.insert(Math.random().toFixed(2))
+  
+}
+// BST.insert(2)
+// BST.insert(1)
+// BST.insert(3)
+// BST.insert(4)
+// BST.insert(5)
+// BST.insert(-1)
 console.log('BST: ', JSON.stringify(BST));
 BST.inOrder()
