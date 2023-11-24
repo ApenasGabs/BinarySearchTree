@@ -6,7 +6,7 @@
   <!-- <a href="https://binarysearchtree.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">Binarysearchtree</h1>
+<h1 align="center">Binary search tree</h1>
 
 <p align="center">
   <img alt="Github top language" src="https://img.shields.io/github/languages/top/apenasgabs/binarysearchtree?color=56BEB8">
