@@ -6,25 +6,44 @@ type Node struct {
 	Value int
 }
 
-func (root *Node) Insert(value int) {
-	if root == nil {
+func (node *Node) Insert(value int) {
+	if node == nil {
 		return
 	}
-	if root.Value < value {
-		if root.Left == nil {
-			root.Left = &Node{Value: value}
+	if node.Value > value {
+		if node.Left == nil {
+			node.Left = &Node{Value: value}
 		} else {
-			root.Left.Insert(value)
+			node.Left.Insert(value)
 		}
 	} else {
-		if root.Right == nil {
-			root.Right = &Node{Value: value}
+		if node.Right == nil {
+			node.Right = &Node{Value: value}
 		} else {
-			root.Right.Insert(value)
+			node.Right.Insert(value)
 		}
 	}
 }
 
+func (node *Node) ascOrder() {
+	if node == nil {
+		return
+	}
+	if node.Left != nil {
+		node.Left.ascOrder()
+	}
+	println(node.Value)
+	if node.Right != nil {
+		node.Right.ascOrder()
+	}
+}
 func main() {
-
+	root := &Node{Value: 10}
+	root.Insert(5)
+	root.Insert(15)
+	root.Insert(8)
+	root.Insert(3)
+	root.Insert(2)
+	root.Insert(18)
+	root.ascOrder()
 }
