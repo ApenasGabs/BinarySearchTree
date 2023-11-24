@@ -80,7 +80,6 @@ $ cd binarysearchtree
 $ npm i
 
 # Run the project
-
 $ npm run js
 # to run the JavaScript version
 
