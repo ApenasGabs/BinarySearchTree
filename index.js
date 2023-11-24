@@ -39,6 +39,18 @@ class BinarySearchTree{
       }
     }
   }
+  inOrder(){
+    if (this.root) {
+      if (this.left) {
+        this.left.inOrder()
+      }
+    console.log(this.root.value)
+    }
+    if (this.right) {
+      this.right.inOrder()
+    }
+  }
+  
 }
 
 const BST = new BinarySearchTree()
@@ -50,3 +62,4 @@ BST.insert(4)
 BST.insert(5)
 BST.insert(-1)
 console.log('BST: ', JSON.stringify(BST));
+BST.inOrder()
