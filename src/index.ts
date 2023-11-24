@@ -49,6 +49,17 @@ class BinarySearchTree {
       this.right.ascOrder();
     }
   }
+  decOrder() {
+    if (this.root) {
+      if (this.right) {
+        this.right.decOrder();
+      }
+      console.log(this.root.value);
+    }
+    if (this.left) {
+      this.left.decOrder();
+    }
+  }
 }
 const BST = new BinarySearchTree();
 
@@ -56,4 +67,4 @@ BST.insert(1);
 BST.insert(3);
 BST.insert(-1);
 BST.insert(5);
-BST.ascOrder();
+BST.decOrder();
