@@ -5,9 +5,9 @@
   "main": "index.ts",
   "scripts": {
   "build": "tsc",
-  "start": "node ./dist/index.js",
-  "dev": "ts-node src/index.ts"
-
+  "js": "node index.js",
+  "ts": "ts-node src/index.ts",
+  "go": "go run main.go"
   },
   "keywords": [],
   "author": "ApenasGabs",
