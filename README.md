@@ -46,7 +46,7 @@
 
 ## :dart: About ##
 
-Describe your project
+Repository used to study and implement the binary tree search algorithm 
 
 ## :sparkles: Features ##
 
