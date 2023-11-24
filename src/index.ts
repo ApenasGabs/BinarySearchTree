@@ -96,6 +96,13 @@ const ascOrder = (tree: Tree): void => {
   ascOrder(tree.right);
 };
 
+const decOrder = (tree: Tree): void => {
+  if (tree === null) return;
+  decOrder(tree.right);
+  console.log(tree.value);
+  decOrder(tree.left);
+};
+
 let bst: Tree = null;
 
 bst = insert(bst, 1);
