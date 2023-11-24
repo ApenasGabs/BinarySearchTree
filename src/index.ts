@@ -68,3 +68,23 @@ BST.insert(3);
 BST.insert(-1);
 BST.insert(5);
 BST.decOrder();
+
+type MyFcNode = {
+  value: number;
+  left: Tree | null;
+  right: Tree | null;
+};
+
+type Tree = MyFcNode | null;
+
+const insert = (tree: Tree, value: number): Tree => {
+  if (tree === null) {
+    return { value: value, left: null, right: null };
+  }
+  if (value < tree.value) {
+    tree.left = insert(tree.left, value);
+  } else if (value > tree.value) {
+    tree.right = insert(tree.right, value);
+  }
+  return tree;
+};
