@@ -8,10 +8,6 @@ class Node {
   }
 }
 
-// const MyNode = new Node('batata')
-
-// console.log('MyNode: ', MyNode);
-
 class BinarySearchTree {
   constructor() {
     this.root = null;
